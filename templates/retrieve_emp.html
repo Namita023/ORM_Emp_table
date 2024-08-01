@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <table class="table text-center">
+        <tr class="bg-danger">
+            <th>EMPNO</th>
+            <th>ENAME</th>
+            <th>JOB</th>
+            <th>MGR</th>
+            <th>HIREDATE</th>
+            <th>SAL</th>
+            <th>COMM</th>
+            <th>DEPTNO</th>
+        </tr>
+        {% for i in employee %}
+        <tr class="text-danger">
+            <td>{{i.empno}}</td>
+            <td>{{i.ename}}</td>
+            <td>{{i.job}}</td>
+            <td>{{i.mgr}}</td>
+            <td>{{i.hiredate}}</td>
+            <td>{{i.sal}}</td>
+            <td>{{i.comm}}</td>
+            <td>{{i.deptno}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
